@@ -14,6 +14,30 @@
 </head>
 <body id="sub">
     <h1 class="d-none">로또 한울</h1>
+    <div id="sidePannel" class="d-none">
+        <div id="closeSide">
+            <a href="#">
+                <i class="fa-solid fa-close"></i>
+            </a>
+        </div>
+        <div class="pannel-overlay">
+            <nav>
+                <ul id="snb"><!-- side navigation bar -->
+                    <li><a href="#">소개</a></li>
+                    <li><a href="#">서비스</a></li>
+                    <li><a href="#">당첨확률</a></li>
+                    <li><a href="#">당첨후기</a></li>
+                </ul>
+                <hr>
+                <ul class="icon-links">
+                    <li><a href="/"><i class="fa-solid fa-house"></i></a></li>
+                    <li><a href="/login"><i class="fa-solid fa-lock-open"></i></a></li>
+                    <li><a href="/join"><i class="fa-solid fa-user-plus"></i></a></li>
+                    <li><a href="/cs"><i class="fa-solid fa-headset"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
     <header>
         <div class="header-top">
             <ul class="top-wrap">
@@ -21,7 +45,8 @@
                     <a href="/"><i class="fa-solid fa-house"></i></a>
                 </li>
                 <li>
-                    <a href="#"><i class="fa-solid fa-bars"></i></a>
+                    <!-- 메뉴바 : burger icon-->
+                    <div id="openSide"><a href="#"><i class="fa-solid fa-bars"></i></a></div>
                 </li>
             </ul>
         </div>
@@ -78,5 +103,7 @@
             </li>
         </ul>
     </footer>
+    <script src="script/route.js"></script>
+    <script src="script/lotto.js"></script>
 </body>
 </html>
