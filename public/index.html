@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <title>스마트UXUI 디자인과정</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="main">
+    <h1 class="d-none">로또 한울</h1>
+    <div id="sidePannel" class="d-none">
+        <a href="#"><i class="fa-solid fa-bars"></i></a>                                                
+        <div class="pannel-overlay">
+            <nav>
+                <ul id="snb"><!-- side navigation bar -->
+                    <li><a href="#">소개</a></li>
+                    <li><a href="#">서비스</a></li>
+                    <li><a href="#">당첨확률</a></li>
+                    <li><a href="#">당첨후기</a></li>
+                </ul>
+                <hr>
+                <ul class="icon-links">
+                    <li><a href="#">홈</a></li>
+                    <li><a href="#">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                    <li><a href="#">고객센터</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <header>
+        <div class="header-top">
+            <ul class="top-wrap">
+                <li>
+                    <a href="/"><i class="fa-solid fa-house"></i></a>
+                </li>
+                <li>
+                    <!-- 메뉴바 : burger icon-->
+                    <a href="#"><i class="fa-solid fa-bars"></i></a>                                        
+                </li>
+            </ul>
+        </div>
+        <div class="logo">
+            <a href="#">
+                <img src="images/logo.png" alt="로고">
+            </a>
+        </div>
+    </header>
+    <section>
+        <div class="btns">
+            <button id="make_num5">생성하기</button>
+            <button id="make_num1">생성하기</button>
+        </div>
+    </section>
+    <footer>
+        <ul class="links">
+            <li>
+                <a href="/join">회원가입</a>
+            </li>
+            <li>
+                <a href="/cs">고객센터</a>
+            </li>
+        </ul>
+    </footer>
+    <script src="script/route.js"></script>
+    <script src="script/lotto.js"></script>
+</body>
+</html>
