@@ -1,0 +1,15 @@
+# ignore folder
+node_modules/
+
+# ignore files
+*.psd
+*.ai
+*.mp4
+*.wmv
+*.mp3
+*.ogg
+*.dxf
+*.pdf
+*.java
+*.xls
+*.hwp
