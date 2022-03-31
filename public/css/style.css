@@ -24,6 +24,9 @@ a, a:link {
 .text-center {
     text-align: center;
 }
+.my-1 {
+    margin: 1rem 0
+}
 .d-none {
     display: none;
 }
@@ -225,6 +228,65 @@ section {
         position: absolute;
         right: 0;
     }
+    /* ------- mobile section : result page -------- */
+    #lotto_num .dl-wrap {
+        display: table;
+        width: 90%;
+        margin: 0 auto;
+    }
+    #lotto_num dl {
+        display: table-row;
+    }
+    #lotto_num dt, #lotto_num dd {
+        display: table-cell
+    }
+    #lotto_num dt {
+        background: #E4E4E4;
+        color: var(--base-text-dark);
+        padding: 1rem 2rem
+    }
+    #lotto_num dd {
+        border-top: 1px solid #E4E4E4;
+        border-bottom: 1px solid #E4E4E4;
+        letter-spacing: 5px
+    }
+
+    #blind {
+        height: 30px;
+        color: var(--base-text-dark);
+        font-size: var(--base-font-size-small, 11px);
+        width: 150px;
+        border-radius: 50px;
+        position: relative;
+        display: block;
+        margin: 2rem auto;
+        transition: all ease-in-out .3s        
+    }
+    #blind.lock {
+        background: var(--base-bg-gray, #e4e4e4);        
+    }
+    #blind.unlock {                
+        background: var(--main-color3);
+        color: var(--base-text-white);
+    }
+    #blind::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        position: absolute;
+        background: var(--base-bg-white);       
+        top: 5px;
+        transition: all ease-in-out .2s
+    }
+    #blind.lock::before {
+        left: 5px
+    }
+    #blind.unlock::before {
+        left: calc(100% - 25px)
+    }
+
     /* ------- mobile section : customer page -------- */
     .icon-list {
         display: grid;

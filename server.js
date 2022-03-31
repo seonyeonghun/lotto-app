@@ -23,6 +23,12 @@ app.get('/cs', (req, res) => {
 app.get('/add_user', (req, res) => {
     res.send("정상적으로 회원가입 되었습니다.")
 })
+app.get('/result1', (req, res) => {
+    res.sendFile(__dirname+'/public/result1.html')
+})
+app.get('/result5', (req, res) => {
+    res.sendFile(__dirname+'/public/result5.html')
+})
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
