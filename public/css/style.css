@@ -24,6 +24,12 @@ a, a:link {
 .text-center {
     text-align: center;
 }
+.justify-center {
+    justify-content: center;
+}
+.column-direction {
+    flex-direction: column;
+}
 .my-1 {
     margin: 1rem 0
 }
@@ -164,6 +170,7 @@ section {
     }
     /* ------- mobile section : login page -------- */
     #loginForm li, #registerForm li {
+        display: flex;
         position: relative;
         margin: 0 0 1rem 0
     }
@@ -213,9 +220,10 @@ section {
         border-radius: 10px;
         height: 52px;
         width: 27%;
-        margin: 0 0 0 1%;        
+        margin: 0 0 0 5%;        
         color: var(--base-text-white);
-        background: var(--main-color1)
+        background: var(--main-color1);
+        box-shadow: 0 0 10px 0 rgba(0,0,0,.2);
     }
     label[for=userPrivacy] {
         position: absolute;
@@ -335,5 +343,16 @@ section {
         gap:1rem;
         justify-content: center;
         align-items: center;
+    }
+}
+
+@media screen and (max-width: 425px){
+    #registerForm li #clickSecurity { /* a : inline element */
+        margin: 0 0 0 10px;        
+    }
+}
+@media screen and (max-width: 320px){
+    #lotto_num dd {
+        letter-spacing: -1px;
     }
 }
