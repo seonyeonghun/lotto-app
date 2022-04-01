@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <title>스마트UXUI 디자인과정</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="main">
+    <h1 class="d-none">로또 한울</h1>
+    <div id="sidePannel" class="d-none">
+        <div id="closeSide">
+            <a href="#">
+                <i class="fa-solid fa-close"></i>
+            </a>
+        </div>
+        <div class="pannel-overlay">
+            <nav>
+                <ul id="snb"><!-- side navigation bar -->
+                    <li><a href="#">소개</a></li>
+                    <li><a href="#">서비스</a></li>
+                    <li><a href="#">당첨확률</a></li>
+                    <li><a href="#">당첨후기</a></li>
+                </ul>
+                <hr>
+                <ul class="icon-links">
+                    <li><a href="/"><i class="fa-solid fa-house"></i></a></li>
+                    <li><a href="/login"><i class="fa-solid fa-lock-open"></i></a></li>
+                    <li><a href="/join"><i class="fa-solid fa-user-plus"></i></a></li>
+                    <li><a href="/cs"><i class="fa-solid fa-headset"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <header>
+        <div class="header-top">
+            <ul class="top-wrap">
+                <li>
+                    <a href="/"><i class="fa-solid fa-house"></i></a>
+                </li>
+                <li>
+                    <!-- 메뉴바 : burger icon-->
+                    <div id="openSide"><a href="#"><i class="fa-solid fa-bars"></i></a></div>
+                </li>
+            </ul>
+        </div>
+        <div class="logo">
+            <a href="#">
+                <img src="images/logo.png" alt="로고">
+            </a>
+        </div>
+    </header>
+    <section>
+        <h2 class="d-none">금주 추천번호</h2>
+        <p class="text-center my-1">로또 한울은 고객님의 당첨을 기원합니다.</p>
+        <article>
+            <h3 class="d-none">생성한 로또번호</h3>
+            <ul id="lotto_num"></ul>
+        </article>
+        <article>
+            <h3 class="d-none">지난주 당첨번호</h3>
+            <button id="blind" class="lock">블라인드 해제</button>
+        </article>
+        <script>
+            const lottoNum = document.querySelector("#lotto_num");
+            let lottos = localStorage.getItem("lottoNums");
+            lottos = JSON.parse(lottos);
+            window.addEventListener("load", function(){
+                // console.dir(div);
+                const labels = ["A","B","C","D","E"]
+                for(let i=0; i<lottos.length;i++){
+                    let num = lottos[i];
+                    num = String(num).replaceAll(","," ");
+                    let liTag = document.createElement("li");
+                    liTag.innerHTML = "<span>"+labels[i]+"</span>"+"<span>"+num+"</span>";
+                    lottoNum.appendChild(liTag);
+                }
+                // let row = `
+                // <div class="dl-wrap">
+                // <dl class="text-center">
+                //     <dt>A</dt>
+                //     <dd>${new_lottoNum}</dd>
+                // </dl>
+                // </div>
+                // `
+                // lottoNum.innerHTML = "<p>"+lottos+"</p>";
+            })
+        </script>
+    </section>
+    <footer>
+        <ul class="links">
+            <li>
+                <a href="/join">회원가입</a>
+            </li>
+            <li>
+                <a href="/cs">고객센터</a>
+            </li>
+        </ul>
+    </footer>
+    <script src="script/route.js"></script>
+</body>
+</html>
